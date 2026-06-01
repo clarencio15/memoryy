@@ -1,0 +1,9 @@
+services:
+  - type: worker
+    name: ev4x-builder
+    runtime: python
+    buildCommand: pip install discord.py==2.3.2 requests==2.31.0 pyinstaller==6.3.0 pycryptodome==3.19.0
+    startCommand: python bot.py
+    envVars:
+      - key: TOKEN
+        sync: false
